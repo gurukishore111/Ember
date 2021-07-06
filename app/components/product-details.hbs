@@ -21,14 +21,18 @@
         <i class='text-danger font-weight-bold'>{{currency @cprice}}</i>
       </section>
       <p class='card-text text-muted truncate'>{{@description}}</p>
-      <div class='productdetails__colors active-{{@color}}'>
-        {{#each @colors as |colorInfo|}}
-          <span
-            {{on 'click' (fn @onChangeColor colorInfo.color)}}
-            class='productdetails__color {{concat 'color-' colorInfo.color}}'
-          ></span>
-        {{/each}}
-        {{!-- <span
+      <div class='d-flex justify-content-between align-items-end'>
+        <div>
+          <h5>Colors</h5>
+          <div class='productdetails__colors active-{{@color}}'>
+            {{#each @colors as |colorInfo|}}
+              <span
+                {{on 'click' (fn @onChangeColor colorInfo.color)}}
+                class='productdetails__color
+                  {{concat 'color-' colorInfo.color}}'
+              ></span>
+            {{/each}}
+            {{!-- <span
           {{on 'click' (fn @onChangeColor 'red')}}
           class='productdetails__color color-red'
         ></span>
@@ -36,6 +40,17 @@
           {{on 'click' (fn @onChangeColor 'black')}}
           class='productdetails__color color-black'
         ></span> --}}
+          </div>
+
+        </div>
+        <button
+          class='btn btn-info'
+          type='button'
+          {{on 'click' this.addToCart}}
+        >
+          <i class='fa fa-shopping-cart mr-1'></i>
+          Add to Cart
+        </button>
       </div>
     </div>
 

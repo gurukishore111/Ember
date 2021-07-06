@@ -45,3 +45,17 @@
   background: white;
   white-space: pre;
 }
+
+.cart-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
