@@ -1,18 +1,20 @@
 <GeneralContainer>
-  <ProductDetails
-    @color={{this.color}}
-    @onChangeColor={{this.onChangeColor}}
-    @src={{this.ProductImage}}
-    @colors={{this.model.colors}}
-    @description={{this.model.description}}
-    @name={{this.model.name}}
-    @oprice={{this.model.price.original}}
-    @cprice={{this.model.price.current}}
-  />
-  <h5 class='mt-5'>Features</h5>
-  <ul>
-    {{#each this.model.features as |feature|}}
-      <li>{{feature}}</li>
-    {{/each}}
-  </ul>
+  <div>
+    <ProductDetails
+      @color={{this.color}}
+      @onChangeColor={{this.onChangeColor}}
+      @src={{this.productImage}}
+      @colors={{this.model.colors}}
+      @description={{this.model.description}}
+      @name={{this.model.name}}
+      @oprice={{this.model.price.original}}
+      @cprice={{this.model.price.current}}
+    />
+    <h5 class='mt-5'>Features</h5>
+    <ul>
+      {{#each this.model.features as |feature|}}
+        <li>{{feature}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </GeneralContainer>
