@@ -1,0 +1,63 @@
+{{page-title 'Home'}}
+<LinkTo @route='cart' class='cart-link'>
+  <i class='fa fa-shopping-basket'></i>
+</LinkTo>
+
+<div class='container'>
+  <h2 class='text-center mt-5 mb-5'>
+    <span class='text-red'>Ember</span>
+    Shopping 🛍</h2>
+  <div class='row'>
+    <div class='col-md-4 mt-3'>
+      <div class='card'>
+        <img
+          class='card-img-top'
+          src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
+          alt='Card image cap'
+        />
+        <div class='card-body'>
+          <LinkTo @route='item' @model='1'>
+            <h5 class='card-title'>Product 1</h5>
+          </LinkTo>
+          <p class='card-text'>Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href='#' class='btn btn-primary'>Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4 mt-3'>
+      <div class='card'>
+        <img
+          class='card-img-top'
+          src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
+          alt='Card image cap'
+        />
+        <div class='card-body'>
+          <LinkTo @route='item' @model='2'>
+            <h5 class='card-title'>Product 2</h5>
+          </LinkTo>
+          <p class='card-text'>Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href='#' class='btn btn-primary'>Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class='col-md-4 mt-3'>
+      <div class='card'>
+        <img
+          class='card-img-top'
+          src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
+          alt='Card image cap'
+        />
+        <div class='card-body'>
+          <LinkTo @route='item' @model='3'>
+            <h5 class='card-title'>Product 3</h5>
+          </LinkTo>
+          <p class='card-text'>Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href='#' class='btn btn-primary'>Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
