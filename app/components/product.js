@@ -8,4 +8,5 @@ export default class ProductComponent extends Component {
   //   addNumber() {
   //     return (this.number = this.number + 1);
   //   }
+  productImage = this.args.image.colors[0].image;
 }

@@ -1,11 +1,12 @@
 <div class='container productdetails'>
   <div class='row productdetails__flex'>
     <div class='col'>
-      <img class='productdetails__image' src={{@src}} alt='product image' />
+      {{#if @src}}
+        <img class='productdetails__image' src={{@src}} alt='product image' />
+      {{/if}}
     </div>
     <div class='col mt-5'>
-      <h2>boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic
-        Aesthetics.</h2>
+      <h2>{{@name}}</h2>
       <section class='mb-1'>
         <div class='text-warning'>
           <i class='fa fa-star'></i>
@@ -16,22 +17,25 @@
         </div>
       </section>
       <section class='mb-1'>
-        <del class='small text-black-50'>$199.95</del>
-        <i class='text-danger font-weight-bold'>$99.98</i>
+        <del class='small text-black-50'>{{@oprice}}</del>
+        <i class='text-danger font-weight-bold'>{{@cprice}}</i>
       </section>
-      <p class='card-text text-muted'>Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Nulla cupiditate unde suscipit perferendis animi
-        molestias cumque, explicabo alias ab recusandae enim natus reiciendis
-        mollitia doloremque aspernatur nostrum distinctio voluptates blanditiis!</p>
+      <p class='card-text text-muted'>{{@description}}</p>
       <div class='productdetails__colors active-{{@color}}'>
-        <span
+        {{#each @colors as |colorInfo|}}
+          <span
+            {{on 'click' (fn @onChangeColor colorInfo.color)}}
+            class='productdetails__color {{concat 'color-' colorInfo.color}}'
+          ></span>
+        {{/each}}
+        {{!-- <span
           {{on 'click' (fn @onChangeColor 'red')}}
           class='productdetails__color color-red'
         ></span>
         <span
           {{on 'click' (fn @onChangeColor 'black')}}
           class='productdetails__color color-black'
-        ></span>
+        ></span> --}}
       </div>
     </div>
 

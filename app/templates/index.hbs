@@ -4,14 +4,18 @@
     <span class='text-red'>Ember</span>
     Shopping 🛍</h2>
   <div class='row'>
-    <Product
-      @model='1'
-      @name='Beats Wireless HeadPhones'
-      @image='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
-      @price='$99.80'
-      @description='boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic Aesthetics, Plush Padded Earcups, Immersive Audio, Bluetooth v5.0 & Upto 20H Playback(Red)'
-    />
-    <Product
+    {{#each this.model as |product|}}
+      <Product
+        @model={{product.id}}
+        @name={{product.name}}
+        @image={{product}}
+        @description={{product.description}}
+        @oprice={{this.model.price.original}}
+        @cprice={{this.model.price.current}}
+      />
+    {{/each}}
+
+    {{! <Product
       @model='2'
       @name='Bluetooth Wireless HeadPhones'
       @image='https://media.wired.com/photos/5f52a44bb555bc55dbcdf5a8/master/pass/Gear-Wireless-Bluetooth-1226031847.jpg'
@@ -24,6 +28,6 @@
       @image='https://assets-global.website-files.com/5b2c8a9fa49e8e2d4604e60b/5eb34dd704ebab344d095278_nuraphone-desktop.png'
       @price='$79.80'
       @description='boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic Aesthetics, Plush Padded Earcups, Immersive Audio, Bluetooth v5.0 & Upto 20H Playback(Red)'
-    />
+    /> }}
   </div>
 </GeneralContainer>
