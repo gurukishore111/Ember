@@ -31,8 +31,17 @@
 .card img {
   width: 100%;
   height: 270px;
+  object-fit: cover;
 }
 
 .text-red {
   color: rgb(211, 98, 98);
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  background: white;
+  white-space: pre;
 }

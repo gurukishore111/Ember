@@ -1,0 +1,20 @@
+<div class='card-body'>
+  <LinkTo @route='item' @model={{@model}}>
+    <h5 class='card-title'>{{@name}}</h5>
+  </LinkTo>
+  <section class='mb-1'>
+    <div class='text-warning'>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star'></i>
+      <i class='fa fa-star-half-o'></i>
+    </div>
+  </section>
+  <section class='mb-1'>
+    <del class='small text-black-50'>$199.95</del>
+    <i class='text-danger font-weight-bold'>$99.98</i>
+  </section>
+  <p class='card-text text-muted truncate'>{{@description}}</p>
+  <a href='#' class='btn btn-primary'>Go somewhere</a>
+</div>

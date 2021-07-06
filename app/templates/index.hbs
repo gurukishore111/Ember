@@ -1,63 +1,29 @@
 {{page-title 'Home'}}
-<LinkTo @route='cart' class='cart-link'>
-  <i class='fa fa-shopping-basket'></i>
-</LinkTo>
-
-<div class='container'>
+<GeneralContainer>
   <h2 class='text-center mt-5 mb-5'>
     <span class='text-red'>Ember</span>
     Shopping 🛍</h2>
   <div class='row'>
-    <div class='col-md-4 mt-3'>
-      <div class='card'>
-        <img
-          class='card-img-top'
-          src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
-          alt='Card image cap'
-        />
-        <div class='card-body'>
-          <LinkTo @route='item' @model='1'>
-            <h5 class='card-title'>Product 1</h5>
-          </LinkTo>
-          <p class='card-text'>Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <a href='#' class='btn btn-primary'>Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class='col-md-4 mt-3'>
-      <div class='card'>
-        <img
-          class='card-img-top'
-          src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
-          alt='Card image cap'
-        />
-        <div class='card-body'>
-          <LinkTo @route='item' @model='2'>
-            <h5 class='card-title'>Product 2</h5>
-          </LinkTo>
-          <p class='card-text'>Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <a href='#' class='btn btn-primary'>Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class='col-md-4 mt-3'>
-      <div class='card'>
-        <img
-          class='card-img-top'
-          src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
-          alt='Card image cap'
-        />
-        <div class='card-body'>
-          <LinkTo @route='item' @model='3'>
-            <h5 class='card-title'>Product 3</h5>
-          </LinkTo>
-          <p class='card-text'>Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <a href='#' class='btn btn-primary'>Go somewhere</a>
-        </div>
-      </div>
-    </div>
+    <Product
+      @model='1'
+      @name='Beats Wireless HeadPhones'
+      @image='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHNldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
+      @price='$99.80'
+      @description='boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic Aesthetics, Plush Padded Earcups, Immersive Audio, Bluetooth v5.0 & Upto 20H Playback(Red)'
+    />
+    <Product
+      @model='2'
+      @name='Bluetooth Wireless HeadPhones'
+      @image='https://media.wired.com/photos/5f52a44bb555bc55dbcdf5a8/master/pass/Gear-Wireless-Bluetooth-1226031847.jpg'
+      @price='$89.80'
+      @description='boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic Aesthetics, Plush Padded Earcups, Immersive Audio, Bluetooth v5.0 & Upto 20H Playback(Red)'
+    />
+    <Product
+      @model='3'
+      @name='Beats Wireless HeadPhones'
+      @image='https://assets-global.website-files.com/5b2c8a9fa49e8e2d4604e60b/5eb34dd704ebab344d095278_nuraphone-desktop.png'
+      @price='$79.80'
+      @description='boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic Aesthetics, Plush Padded Earcups, Immersive Audio, Bluetooth v5.0 & Upto 20H Playback(Red)'
+    />
   </div>
-</div>
+</GeneralContainer>
