@@ -16,5 +16,8 @@
     <i class='text-danger font-weight-bold'>{{currency @cprice}}</i>
   </section>
   <p class='card-text text-muted truncate'>{{@description}}</p>
-  <a href='#' class='btn btn-primary'>Details</a>
+  <LinkTo @route='item' @model={{@model}}>
+    <p class='btn btn-info'>Details
+      <i class='fa fa-arrow-circle-right'></i></p>
+  </LinkTo>
 </div>
