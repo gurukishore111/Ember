@@ -11,7 +11,7 @@ export default class ProductDetailsComponent extends Component {
     this.cart.addItem({
       name,
       color,
-      image: colors.find((colorInfo) => colorInfo.color).image,
+      image: colors.find((colorInfo) => color === colorInfo.color).image,
       price: cprice,
     });
   }
